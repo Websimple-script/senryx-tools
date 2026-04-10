@@ -117,21 +117,25 @@ All containers: `margin: 0 auto`
 
 ## Components
 
-### Pill / Badge
+### Assessment Badge
 ```css
 display: inline-flex;
 align-items: center;
-gap: 8px;
-background: #fef3c7;
-color: #92400e;
+gap: 7px;
+background: #FFE5B0;
+color: #7A4500;
 font-size: 11px;
-font-weight: 600;
-letter-spacing: .12em;
+font-weight: 700;
+letter-spacing: 0.1em;
 text-transform: uppercase;
-padding: 6px 16px;
-border-radius: 100px;
+padding: 5px 14px;
+border-radius: 20px;
 ```
-Dot before text: `6px` circle, `#f59e0b`
+Dot before text: `6px` circle, `#FF9900`
+
+```html
+<div class="intro-badge">Free Assessment &middot; ~5 Minutes</div>
+```
 
 ### Section Chip (quiz)
 ```css
