@@ -4,6 +4,21 @@ Independence Scorecard is the canonical template. All tools should match these p
 
 ---
 
+## UX Patterns
+
+### Question auto-advance
+
+Selecting an answer should automatically advance to the next question. Do not require the user to click a separate "Next" button after choosing an option. Use a short delay (~400ms) to let the selection state register visually before advancing.
+
+```javascript
+function pick(i) {
+  // ...mark selection...
+  setTimeout(function() { nextQuestion(); }, 400);
+}
+```
+
+---
+
 ## Copywriting
 
 ### Headline casing
