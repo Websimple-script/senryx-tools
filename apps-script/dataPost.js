@@ -23,8 +23,17 @@ function doGet(e) {
       scorecardSheet = ss.insertSheet('Independence Leads');
       scorecardSheet.appendRow([
         'First Name', 'Email', 'Score', 'Tier',
-        'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10',
-        'Channel', 'Vendor', 'People', 'Platform', 'System',
+        'Channel: knows top 3 sources',
+        'Channel: pipeline resilience',
+        'Channel: healthy mix',
+        'Vendor: can replace vendors',
+        'Vendor: system runs itself',
+        'People: resilient w/o key person',
+        'People: team knows strategy',
+        'Platform: survives changes',
+        'System: knows acq. cost',
+        'System: reviews data monthly',
+        'Cat: Channel (/12)', 'Cat: Vendor (/8)', 'Cat: People (/8)', 'Cat: Platform (/4)', 'Cat: System (/8)',
         'Date'
       ]);
     }
