@@ -4,6 +4,28 @@ Independence Scorecard is the canonical template. All tools should match these p
 
 ---
 
+## Copywriting
+
+### Headline casing
+
+Use sentence case. Capitalize the first word only. All other words are lowercase unless they are a proper noun, brand name, trademarked term, or acronym.
+
+**Correct**
+- "How Marketing Independent™ is your agency?" ✅
+- "Where does your next marketing dollar go?" ✅
+
+**Incorrect**
+- "How Marketing Independent™ Is Your Agency?" ❌
+- "Where Does Your Next Marketing Dollar Go?" ❌
+
+**Exception — Senryx framework names**
+When a headline leads with or prominently features a Senryx framework name (Marketing Independence™, Marketing Independent™, Retention-Ready), that term is always capitalized regardless of its position in the sentence.
+
+**Why sentence case**
+It reads the way people actually speak. Conversational and approachable rather than formal or corporate. It ages better — title case can feel dated and overly promotional, while sentence case feels more editorial and trustworthy.
+
+---
+
 ## Fonts
 
 ```css
