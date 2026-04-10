@@ -20,15 +20,23 @@ Independence Scorecard is the canonical template. All tools should match these p
 
 ## Colors
 
+| Swatch | Name | Hex |
+|---|---|---|
+| Purple | Brand primary | `#4F10FF` |
+| Orange | Accent / CTA | `#FF9900` |
+| Light | Backgrounds / borders | `#E6E4E8` |
+| Black | Text / dark elements | `#000000` |
+| White | Surfaces | `#FFFFFF` |
+
 ```css
 :root {
-  --purple:  #5b21f4;
-  --orange:  #f59e0b;
-  --black:   #0a0a0a;
-  --gray:    #6b7280;
-  --light:   #f3f4f6;
-  --border:  #e5e7eb;
-  --text:    #111827;
+  --purple:  #4F10FF;
+  --orange:  #FF9900;
+  --black:   #000000;
+  --light:   #E6E4E8;
+  --border:  #E6E4E8;
+  --text:    #000000;
+  --white:   #FFFFFF;
 }
 ```
 
