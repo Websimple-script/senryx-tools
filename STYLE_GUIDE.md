@@ -234,7 +234,7 @@ color: #fff;
 ### CTA Buttons (inside CTA block)
 | Button | Style |
 |---|---|
-| Primary (schedule call) | `background: var(--orange); color: var(--black); font-weight: 700` |
+| Primary (schedule call) | `background: var(--orange); color: #fff; font-weight: 700` — hover: `background: #FFAD33; color: #fff` |
 | Secondary (retake) | `background: #000; color: #fff; font-weight: 500` |
 
 ### Progress Bar
