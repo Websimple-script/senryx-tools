@@ -49,7 +49,45 @@ function doGet(e) {
     ]);
   }
 
-if (params.source === 'retention-calculator') {
+// Positioning Analyzer lead
+  if (params.source === 'positioning-analyzer') {
+    var positioningSheet = ss.getSheetByName('Positioning Leads');
+    if (!positioningSheet) {
+      positioningSheet = ss.insertSheet('Positioning Leads');
+      positioningSheet.appendRow([
+        'First Name', 'Email', 'Profile', 'Total (/48)',
+        'Clarity (/16)', 'Differentiation (/16)', 'Presence (/16)',
+        'Clarity: clear 1-sentence answer',
+        'Clarity: can describe ideal client',
+        'Clarity: knows top revenue/margin services',
+        'Clarity: can answer "why you" in 30 sec',
+        'Differentiation: has defined niche',
+        'Differentiation: website is specific',
+        'Differentiation: clients give specific reason for choosing',
+        'Differentiation: knows competitive difference',
+        'Presence: GBP claimed & updated',
+        'Presence: meaningful Google reviews',
+        'Presence: consistently visible pre-shopping',
+        'Presence: strong name search result',
+        'Date'
+      ]);
+    }
+    positioningSheet.appendRow([
+      params.firstName,
+      params.email,
+      params.profile,
+      params.total,
+      params.clarity,
+      params.differentiation,
+      params.presence,
+      params.a1, params.a2, params.a3, params.a4,
+      params.a5, params.a6, params.a7, params.a8,
+      params.a9, params.a10, params.a11, params.a12,
+      new Date().toLocaleString()
+    ]);
+  }
+
+  if (params.source === 'retention-calculator') {
   var retentionSheet = ss.getSheetByName('Retention Leads');
   if (!retentionSheet) {
     retentionSheet = ss.insertSheet('Retention Leads');
