@@ -264,6 +264,50 @@ background: linear-gradient(90deg, var(--purple), #a78bfa);
 
 ---
 
+## Deployment Checklist
+
+Every new tool must complete all of these steps before it's considered done.
+
+### 1. Set SHEET_URL
+
+All tools share one Google Apps Script endpoint. Set it at the time of creation — never leave it as an empty string.
+
+```javascript
+var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyFSQtdz9ZBfN-K2gdRUQBE6Xcnilu_Qa2v0f3iW-V_Tjr2IqAhA8HeWVm_Lg3p9jsQ/exec';
+```
+
+### 2. Add a `source` parameter to the pixel URL
+
+Every tool must identify itself so `dataPost.js` can route it to the correct sheet tab:
+
+```javascript
+img.src = SHEET_URL
+  + '?source=your-tool-name'
+  + '&firstName=' + encodeURIComponent(firstName)
+  + ...
+```
+
+### 3. Add a handler block in `apps-script/dataPost.js`
+
+Add a new `if (params.source === 'your-tool-name')` block that creates the sheet tab (if it doesn't exist) and appends the row with descriptive column headers.
+
+### 4. Push the Apps Script via clasp
+
+From `senryx-tools/apps-script/`:
+
+```bash
+clasp push
+clasp deploy
+```
+
+If clasp returns an auth error, run `clasp login` first to re-authenticate.
+
+### 5. Each tool lives in its own GitHub repo
+
+Each tool is a standalone repo (e.g. `Websimple-script/positioning-scorecard`). The `senryx-tools` repo holds shared assets only: style guide, `apps-script/`, thumbnails.
+
+---
+
 ## Mobile Breakpoint (`max-width: 600px`)
 
 - Intro padding: `40px 24px 60px`
